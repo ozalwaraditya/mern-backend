@@ -6,7 +6,7 @@ dotenv.config();
 
 const app = express();
 
-const allowedOrigin = 'https://mern-frontend-six-tan.vercel.app/'; 
+const allowedOrigin = 'https://mern-frontend-six-tan.vercel.app'; 
 
 app.use(cors({ origin: allowedOrigin }));
 
