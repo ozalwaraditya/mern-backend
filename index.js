@@ -1,13 +1,19 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import cors from 'cors';
+
 dotenv.config();
 
 const app = express();
 
+const allowedOrigin = 'https://mern-frontend-six-tan.vercel.app/'; 
+
+app.use(cors({ origin: allowedOrigin }));
+
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Server is working...:)"');
+  res.send('Server is working...:)');
 });
 
 app.get('/api', (req, res) => {
